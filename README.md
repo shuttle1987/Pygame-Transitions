@@ -1,20 +1,22 @@
-Pygame-Transitions
-==================
+# Pygame-Transitions
 
 Beautiful &amp; easy transitions for pygame programs
 
-##How does it work ?
+## How does it work ?
 
 It's very simple to implement this plugin, just follow theses 3 steps.
 
-###1. Initialization
+### 1. Initialization
 
 First, import the library: `import transitions`
 And then after opening the window with `pygame.display.set_mode` call this function:
+
 ```python
 transitions.init ( screen, window_width, window_height [ , background_color = [0, 0, 0] ] )
 ```
+
 List of the parameters:
+
 * `screen`: The screen variable returned by `pygame.display.set_mode` for draw
 * `window_width`: The current window width
 * `window_height`: The current window height
@@ -22,7 +24,7 @@ List of the parameters:
 
 **NOTE**: When you resize the window, you should call this initialization function again.
 
-###2. Refreshing the screen
+### 2. Refreshing the screen
 
 You should modify something in your program before using the transitions.
 Using the base of the main program loop suggested by [Paul Vincent Craven](http://simpson.edu/author/pcraven/) in [Program Arcade Games With Python And Pygame - Chapter 5.5](http://programarcadegames.com/index.php?lang=fr&chapter=introduction_to_graphics), like this below:
@@ -57,6 +59,7 @@ while not done:
 ```
 
 You should add a condition to do game logic and draw processing, like this:
+
 ```python
 # [...]
 # -------- Main Program Loop -----------
@@ -85,12 +88,14 @@ while not done:
 
 You should never call `screen.fill` before calling `transitions.updateScreen` otherwise the transition will be a plain color. But keep on updating the screen after doing the transition/game logic.
 
-###3. Calling a transition
+### 3. Calling a transition
 
 ```python
 transitions.run ( name [ , duration = 1 [ , x = -1 [ , y = -1 ] ] ] )
 ```
+
 List of parameters:
+
 * `name`: The name of the transition.
   Available transitions:
   * `fadeOutUp`: Fades the page, change its orientation and zooms in to the selected point.
@@ -101,10 +106,10 @@ List of parameters:
 
 NOTE: The transition will run at the next frame, but the screen will be copied at the call. So if you draw something after this call, it will be hidden on the transition.
 
-##Contributing
+## Contributing
 
 Feel free to report any bug, or add your custom transitions !
 
-##License
+## License
 
 [The MIT License](https://github.com/DeathMiner/Pygame-Transitions/blob/master/LICENSE)
