@@ -3,7 +3,7 @@ Pygame-Transitions
 
 Beautiful &amp; easy transitions for pygame programs
 
-##How does it works ?
+##How does it work ?
 
 It's very simple to implement this plugin, just follow theses 3 steps.
 
@@ -18,14 +18,14 @@ List of the parameters:
 * `screen`: The screen variable returned by `pygame.display.set_mode` for draw
 * `window_width`: The current window width
 * `window_height`: The current window height
-* `background_color`: *OPTIONNAL* The background color of the screen *(DEFAULT: [0, 0, 0] which is black)*
+* `background_color`: *OPTIONAL* The background color of the screen *(DEFAULT: [0, 0, 0] which is black)*
 
-**NOTE**: When resize the window, you should call again this initialization function.
+**NOTE**: When you resize the window, you should call this initialization function again.
 
-###2. Refreshing screen
+###2. Refreshing the screen
 
 You should modify something in your program before using the transitions.
-On the base of the main program loop suggested by [Paul Vincent Craven](http://simpson.edu/author/pcraven/) in [Program Arcade Games With Python And Pygame - Chapter 5.5](http://programarcadegames.com/index.php?lang=fr&chapter=introduction_to_graphics), like this below:
+Using the base of the main program loop suggested by [Paul Vincent Craven](http://simpson.edu/author/pcraven/) in [Program Arcade Games With Python And Pygame - Chapter 5.5](http://programarcadegames.com/index.php?lang=fr&chapter=introduction_to_graphics), like this below:
 
 ```python
 #Loop until the user clicks the close button.
@@ -95,15 +95,15 @@ List of parameters:
   Available transitions:
   * `fadeOutUp`: Fades the page, change its orientation and zooms in to the selected point.
   * `fadeOutDown`: Fades the page and zooms out from the selected point.
-* `duration`: *OPTIONNAL* The duration of the transition in seconds *(DEFAULT: 1 second)*
-* `x`: *OPTIONNAL* X of the selected point for compatible transitions *(DEFAULT: -1 which means center)*
-* `y`: *OPTIONNAL* Y of the selected point for compatible transitions *(DEFAULT: -1 which means center)*
+* `duration`: *OPTIONAL* The duration of the transition in seconds *(DEFAULT: 1 second)*
+* `x`: *OPTIONAL* X of the selected point for compatible transitions *(DEFAULT: -1 which means center)*
+* `y`: *OPTIONAL* Y of the selected point for compatible transitions *(DEFAULT: -1 which means center)*
 
 NOTE: The transition will run at the next frame, but the screen will be copied at the call. So if you draw something after this call, it will be hidden on the transition.
 
 ##Contributing
 
-Fell free to report any bug, or add your custom transitions !
+Feel free to report any bug, or add your custom transitions !
 
 ##License
 
